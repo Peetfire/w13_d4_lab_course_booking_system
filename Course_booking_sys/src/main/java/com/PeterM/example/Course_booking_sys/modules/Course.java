@@ -1,6 +1,7 @@
 package com.PeterM.example.Course_booking_sys.modules;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -25,6 +26,7 @@ public class Course {
         this.name = name;
         this.town = town;
         this.rating = rating;
+        this.bookings = new ArrayList<>();
     }
 
     public Course(){
