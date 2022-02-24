@@ -9,7 +9,9 @@ import com.PeterM.example.Course_booking_sys.repositories.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DataLoader implements ApplicationRunner {
     @Autowired
     CourseRepository courseRepository;
@@ -17,6 +19,11 @@ public class DataLoader implements ApplicationRunner {
     CustomerRepository customerRepository;
     @Autowired
     BookingRepository bookingRepository;
+
+    public DataLoader(){
+
+    }
+
 
     public void run(ApplicationArguments args) {
         Course course = new Course("Learn Java", "Edinburgh", 5);
