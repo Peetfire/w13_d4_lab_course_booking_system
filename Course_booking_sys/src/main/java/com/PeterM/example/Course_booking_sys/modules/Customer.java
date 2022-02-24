@@ -1,5 +1,7 @@
 package com.PeterM.example.Course_booking_sys.modules;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +20,7 @@ public class Customer {
     @Column(name = "age")
     private int age;
 
+    @JsonBackReference
     @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
     private List<Booking> bookings;
 
